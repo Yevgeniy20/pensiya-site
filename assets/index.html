@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Помощь в оформлении пенсии в Казахстане — проверка стажа и расчёта</title>
+  <meta name="description" content="Поможем оформить пенсию, которая вам положена по закону. Бесплатная проверка за 5 минут — узнайте, всё ли учтено в вашем стаже. Казахстан.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ссылка для быстрого перехода к содержанию (для клавиатуры и скринридеров) -->
+  <a class="skip-link" href="#main">Перейти к основному содержанию</a>
+
+  <!-- Верхняя плашка: сразу понятно, для кого услуга -->
+  <div class="topbar" role="region" aria-label="Регион услуги">
+    <div class="wrap topbar__inner">
+      <span>Помощь жителям Казахстана в выходе на пенсию по законодательству РК</span>
+    </div>
+  </div>
+
+  <!-- Шапка убрана по запросу: имя и кнопка "позвонить" не нужны -->
+
+
+  <main id="main">
+
+    <!-- ================= БЛОК 1 — ГЛАВНЫЙ ЭКРАН (полноэкранный) ================= -->
+    <section class="hero-full" aria-labelledby="hero-title">
+      <img class="hero-full__bg" src="assets/hero.jpg" alt="Юлия Жабко, специалист по оформлению пенсии, за работой" width="900" height="1600" loading="eager">
+      <div class="hero-full__overlay"></div>
+      <div class="hero-full__content">
+        <h1 id="hero-title" class="hero-full__title reveal">Поможем оформить пенсию, которая вам положена по закону</h1>
+        <p class="hero-full__lead reveal reveal--d1">Бесплатная проверка за 5 минут — узнайте, всё ли учтено в вашем стаже, по законодательству Казахстана.</p>
+        <p class="hero-full__body reveal reveal--d2">Иногда в расчёт пенсии не попадает часть стажа — из-за смены фамилии, переезда или переименования организации. Мы помогаем это проверить и, если нужно, поправить.</p>
+        <a class="btn btn--primary btn--lg btn--shine reveal reveal--d3" href="#quiz">Пройти проверку</a>
+        <p class="hero-full__reassure reveal reveal--d4">Это бесплатно и ни к чему вас не обязывает.</p>
+      </div>
+      <div class="hero-full__scroll" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ================= БЛОК 2 — ТРИ ВЕЩИ ================= -->
+    <section class="section section--tint" aria-labelledby="b2-title">
+      <div class="wrap narrow">
+        <h2 id="b2-title">Три вещи, в которых уверен почти каждый</h2>
+        <p class="sub">Стоит перепроверить, прежде чем на них полагаться</p>
+
+        <ul class="checklist" aria-label="То, в чём уверены большинство людей">
+          <li>Весь стаж учтён</li>
+          <li>Все документы на месте</li>
+          <li>Государственная база не ошибается</li>
+        </ul>
+
+        <p class="big-line">Чаще всего это так. Но иногда — нет.</p>
+        <p>Причина обычно простая: смена фамилии, переезд между городами, потрёпанная трудовая книжка, работа по договору вместо трудовой, декрет. Любая мелочь может повлиять на итоговый расчёт.</p>
+        <p>Проверить это — не значит кого-то подозревать. Это значит один раз убедиться самому.</p>
+        <p class="emphasis">Если сейчас мелькнула мысль «а вдруг это и обо мне» — стоит к ней прислушаться.</p>
+      </div>
+    </section>
+
+    <!-- ================= БЛОК 3 + КВИЗ + ФОРМА ================= -->
+    <section class="section" id="quiz" aria-labelledby="quiz-title">
+      <div class="wrap narrow">
+        <h2 id="quiz-title">Проверьте себя за 1 минуту</h2>
+        <p class="sub">Ответьте на 6 вопросов — они помогут понять, стоит ли уточнить ваш стаж. Это бесплатно.</p>
+
+        <!-- Шаг 1: вопросы -->
+        <div class="quiz" id="quiz-step-questions">
+          <form id="quiz-form" novalidate>
+            <fieldset class="quiz__group">
+              <legend class="quiz__legend">Ответьте «Да» или «Нет»</legend>
+
+              <div class="quiz__q" data-q="1">
+                <p class="quiz__question">Вы работали до 2000 года?</p>
+                <div class="quiz__answers" role="group" aria-label="Вы работали до 2000 года?">
+                  <button type="button" class="toggle" data-val="yes">Да</button>
+                  <button type="button" class="toggle" data-val="no">Нет</button>
+                </div>
+              </div>
+
+              <div class="quiz__q" data-q="2">
+                <p class="quiz__question">Вы меняли работодателей несколько раз?</p>
+                <div class="quiz__answers" role="group" aria-label="Вы меняли работодателей несколько раз?">
+                  <button type="button" class="toggle" data-val="yes">Да</button>
+                  <button type="button" class="toggle" data-val="no">Нет</button>
+                </div>
+              </div>
+
+              <div class="quiz__q" data-q="3">
+                <p class="quiz__question">Трудовая книжка терялась или переоформлялась?</p>
+                <div class="quiz__answers" role="group" aria-label="Трудовая книжка терялась или переоформлялась?">
+                  <button type="button" class="toggle" data-val="yes">Да</button>
+                  <button type="button" class="toggle" data-val="no">Нет</button>
+                </div>
+              </div>
+
+              <div class="quiz__q" data-q="4">
+                <p class="quiz__question">Вы работали в разных городах или регионах?</p>
+                <div class="quiz__answers" role="group" aria-label="Вы работали в разных городах или регионах?">
+                  <button type="button" class="toggle" data-val="yes">Да</button>
+                  <button type="button" class="toggle" data-val="no">Нет</button>
+                </div>
+              </div>
+
+              <div class="quiz__q" data-q="5">
+                <p class="quiz__question">У вас были декретные отпуска?</p>
+                <div class="quiz__answers" role="group" aria-label="У вас были декретные отпуска?">
+                  <button type="button" class="toggle" data-val="yes">Да</button>
+                  <button type="button" class="toggle" data-val="no">Нет</button>
+                </div>
+              </div>
+
+              <div class="quiz__q" data-q="6">
+                <p class="quiz__question">Были периоды работы без официального оформления?</p>
+                <div class="quiz__answers" role="group" aria-label="Были периоды работы без официального оформления?">
+                  <button type="button" class="toggle" data-val="yes">Да</button>
+                  <button type="button" class="toggle" data-val="no">Нет</button>
+                </div>
+              </div>
+            </fieldset>
+
+            <p class="quiz__error" id="quiz-error" role="alert" hidden>Пожалуйста, ответьте на все вопросы.</p>
+            <button type="submit" class="btn btn--primary btn--lg btn--block">Показать результат</button>
+          </form>
+        </div>
+
+        <!-- Шаг 2: результат (показывается после ответов) -->
+        <div class="quiz-result" id="quiz-step-result" hidden aria-live="polite">
+          <div class="result-card">
+            <h3 class="result-card__title" id="result-title"></h3>
+            <p class="result-card__text" id="result-text"></p>
+          </div>
+
+          <!-- Форма контактов -->
+          <div class="lead-form">
+            <h3>Оставьте контакты — мы свяжемся и договоримся об удобном времени</h3>
+            <form id="contact-form" novalidate>
+              <div class="field">
+                <label for="name">Как вас зовут</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+                <p class="field__error" data-error-for="name" role="alert" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="phone">Номер телефона</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required>
+                <p class="field__error" data-error-for="phone" role="alert" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="time">Когда вам удобно, чтобы мы позвонили</label>
+                <input type="text" id="time" name="time" placeholder="Например: будни после обеда">
+              </div>
+
+              <!-- honeypot от спама, скрыт от людей -->
+              <div class="hp" aria-hidden="true">
+                <label for="company">Не заполняйте это поле</label>
+                <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="field field--check">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">Я согласен(на) на обработку моих персональных данных в соответствии с политикой конфиденциальности.</label>
+                <p class="field__error" data-error-for="consent" role="alert" hidden></p>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--lg btn--block" id="contact-submit">Отправить заявку</button>
+              <p class="lead-form__note">Мы не передаём ваши данные третьим лицам.</p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Шаг 3: подтверждение -->
+        <div class="quiz-done" id="quiz-step-done" hidden aria-live="polite">
+          <div class="result-card result-card--ok">
+            <h3>Заявка отправлена</h3>
+            <p>Спасибо. Мы получили ваши ответы и контакты. Юлия или её специалист свяжется с вами в удобное время. Никаких оплат прямо сейчас не требуется.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= БЛОК 4 — ИСТОРИИ ИЗ ПРАКТИКИ ================= -->
+    <section class="section section--tint" aria-labelledby="b4-title">
+      <div class="wrap">
+        <h2 id="b4-title">Истории из практики</h2>
+        <p class="sub">Типичные ситуации, с которыми обращаются на проверку</p>
+
+        <div class="cards cards--3">
+          <article class="story">
+            <h3 class="story__head">Не поверила, что дело в названии организации</h3>
+            <p>Женщина много лет проработала в бюджетной сфере и была уверена: «У меня всё просто». При проверке выяснилось, что один из периодов работы не был учтён — организация несколько раз переименовывалась, и в базе эти периоды «повисли» отдельно. После уточнения стаж был учтён полностью, а выплата пересчитана.</p>
+          </article>
+
+          <article class="story">
+            <h3 class="story__head">Один работодатель — не значит одна запись</h3>
+            <p>Мужчина много лет работал вахтовым методом в разных регионах. Ему казалось: раз работодатель один — беспокоиться не о чем. Но часть периодов оказалась зафиксирована с ошибками в датах. После уточнения расчёт изменился в его пользу.</p>
+          </article>
+
+          <article class="story">
+            <h3 class="story__head">Пришла «просто убедиться» — и не зря</h3>
+            <p>Женщина пришла со словами «дочка настояла, я и так знаю, что всё в порядке». При проверке обнаружился период работы без официального оформления в начале карьеры — она сама о нём даже не вспомнила бы, если бы не увидела старую запись в документах.</p>
+          </article>
+        </div>
+
+        <p class="emphasis center">Во всех трёх случаях люди сначала были уверены, что всё в порядке. Проверка не отняла много времени — зато дала точный ответ, а не догадку.</p>
+      </div>
+    </section>
+
+    <!-- ================= БЛОК 5 — КАК МЫ ПОДХОДИМ ================= -->
+    <section class="section" aria-labelledby="b5-title">
+      <div class="wrap narrow">
+        <h2 id="b5-title">Как мы подходим к диагностике</h2>
+        <p class="sub">Не оформление на автомате, а разбор именно вашей ситуации</p>
+        <p>За последние годы через диагностику прошло много людей — с самыми разными историями и документами.</p>
+        <p>Но интереснее другое: почти каждый начинал с одной и той же мысли — «Наверное, у меня всё нормально».</p>
+        <p>Именно поэтому диагностика — это не оформление «на автомате». Это внимательный разбор именно вашей ситуации, прежде чем что-либо предпринимать.</p>
+      </div>
+    </section>
+
+    <!-- ================= БЛОК 6 — О СПЕЦИАЛИСТЕ ================= -->
+    <section class="section section--tint" aria-labelledby="b6-title">
+      <div class="wrap about">
+        <div class="about__media">
+          <figure class="photo photo--portrait">
+            <img src="assets/yulia.jpg" alt="Юлия Жабко, специалист по оформлению пенсии" width="700" height="1268" loading="lazy">
+          </figure>
+        </div>
+        <div class="about__text">
+          <h2 id="b6-title">О специалисте</h2>
+          <p class="about__name">Юлия Жабко</p>
+          <p>Более 16 лет помогает людям предпенсионного возраста оформить пенсию без ошибок и лишних хлопот.</p>
+          <ul class="facts">
+            <li>Международный сертификат CPA EURASIA</li>
+            <li>Помогла оформить пенсию более чем 50 клиентам</li>
+          </ul>
+          <!-- ДОБАВИТЬ при наличии: официальный статус (ИП / рег. номер) для доверия -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= БЛОК 7 — ЧТО ВХОДИТ В ДИАГНОСТИКУ ================= -->
+    <section class="section" aria-labelledby="b7-title">
+      <div class="wrap narrow">
+        <h2 id="b7-title">Что входит в диагностику</h2>
+        <p class="sub">60 минут, 5 шагов, один понятный результат: точный ответ, а не догадки</p>
+        <p>Это важно понимать заранее — за что именно вы платите. Специалист:</p>
+
+        <ol class="steps">
+          <li><span class="steps__num">1</span><span>Изучает ваши документы</span></li>
+          <li><span class="steps__num">2</span><span>Проверяет учтённый стаж</span></li>
+          <li><span class="steps__num">3</span><span>Анализирует пенсионные отчисления</span></li>
+          <li><span class="steps__num">4</span><span>Объясняет, если находит спорные моменты или риски</span></li>
+          <li><span class="steps__num">5</span><span>Составляет понятный план дальнейших шагов — если они вообще нужны</span></li>
+        </ol>
+
+        <p class="emphasis">Никакой спешки. Никакого «подписывайте здесь». Только разбор на человеческом языке, с объяснением каждого пункта.</p>
+      </div>
+    </section>
+
+    <!-- =========== БЛОК: ИСТОРИИ О НАВЕДЕНИИ ПОРЯДКА (ТРЕБУЕТ ДОРАБОТКИ) =========== -->
+    <!--
+      НАПОМИНАНИЕ: этот блок вы отложили на доработку.
+      «Истории о клиентах, как они навели порядок в документах и получили хороший результат».
+      Когда будет готов текст — вставить сюда, оформление такое же, как у блока «Истории из практики».
+    -->
+
+    <!-- ================= БЛОК 8 — КЕЙС, В КОТОРОМ НИЧЕГО НЕ НАШЛИ ================= -->
+    <section class="section section--quiet" aria-labelledby="b8-title">
+      <div class="wrap narrow">
+        <h2 id="b8-title">Кейс, в котором ничего не нашли</h2>
+        <p class="sub">И почему это тоже хороший результат</p>
+        <p>Иногда после диагностики оказывается: всё в порядке, ошибок и пропущенных периодов нет.</p>
+        <p>Это звучит не так эффектно, как истории про доначисления. Но на деле это один из самых важных результатов: спокойствие, подкреплённое проверкой, а не просто надеждой.</p>
+        <p class="emphasis">Задача диагностики — не найти проблему во что бы то ни стало, а дать честный ответ, каким бы он ни был.</p>
+      </div>
+    </section>
+
+    <!-- ================= БЛОК 9 — ПОЧЕМУ ОБРАЩАЮТСЯ ПОЗДНО ================= -->
+    <section class="section" aria-labelledby="b9-title">
+      <div class="wrap narrow">
+        <h2 id="b9-title">Почему многие обращаются слишком поздно</h2>
+        <p class="sub">Дело не в спешке. Дело в том, что документы легче найти раньше, чем позже</p>
+        <p>Нередко после консультации слышим: «Жаль, что я не узнал об этом на несколько лет раньше».</p>
+        <p>Дело не в упущенном времени. Дело в том, что чем раньше начать разбираться, тем легче найти нужную справку, вспомнить название организации, восстановить утерянный документ.</p>
+        <p>Через несколько лет то же самое сделать сложнее — не потому что «поздно», а потому что документы теряются, организации закрываются, а люди, которые могли бы что-то подтвердить, уходят.</p>
+
+        <div class="two-lists">
+          <div class="two-lists__col">
+            <h3>С чем чаще всего приходят на диагностику</h3>
+            <ul class="bullets">
+              <li>Непонятно, откуда взялась итоговая сумма выплаты</li>
+              <li>Сомнения, весь ли стаж учтён</li>
+              <li>Утерянная или испорченная трудовая книжка</li>
+              <li>Работа в нескольких городах или у нескольких работодателей</li>
+              <li>Периоды, которые сложно подтвердить документально</li>
+            </ul>
+          </div>
+          <div class="two-lists__col">
+            <h3>Какие документы чаще всего требуют уточнения</h3>
+            <ul class="bullets">
+              <li>Трудовая книжка с исправлениями или нечитаемыми записями</li>
+              <li>Справки о заработной плате за ранние годы работы</li>
+              <li>Документы, подтверждающие декретные периоды</li>
+              <li>Документы о переименовании организаций</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>Почему люди откладывают проверку: обычно не потому, что не хотят, а потому что кажется — раз никто не жаловался, значит, всё нормально. Чувство понятное. Но оно, к сожалению, ничего не проверяет.</p>
+      </div>
+    </section>
+
+    <!-- ================= БЛОК 10 — О ЧЁМ ВЫ ДУМАЕТЕ ================= -->
+    <section class="section section--tint" aria-labelledby="b10-title">
+      <div class="wrap narrow">
+        <h2 id="b10-title">О чём вы, возможно, сейчас думаете</h2>
+
+        <div class="objection">
+          <p class="objection__thought">«Наверное, у меня всё нормально».</p>
+          <p>Так думает большинство, кто приходит на диагностику. Иногда это подтверждается. Иногда — нет. Точный ответ даёт только проверка.</p>
+        </div>
+
+        <div class="objection">
+          <p class="objection__thought">«Государство само всё посчитает».</p>
+          <p>Расчёт действительно производится по данным из базы. Но эти данные вносили люди — в разные годы, в разных организациях, вручную. А там, где есть человеческий фактор, иногда случаются неточности.</p>
+        </div>
+
+        <div class="objection">
+          <p class="objection__thought">«Потом проверю, сейчас не горит».</p>
+          <p>Проверить можно и позже. Но чем раньше — тем проще найти документы и людей, которые могут что-то подтвердить. Это не про страх опоздать. Это просто про то, что раньше — легче.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= БЛОК 11 — МЯГКИЙ ПЕРЕХОД ================= -->
+    <section class="section section--cta" aria-labelledby="b11-title">
+      <div class="wrap narrow center">
+        <h2 id="b11-title">Если у вас похожая ситуация — расскажите о ней, разберёмся вместе</h2>
+        <p class="lead">Пройдите короткий опрос — он займёт около минуты — и проверьте, есть ли у вас основания для диагностики.</p>
+        <a class="btn btn--primary btn--lg" href="#quiz">Пройти опрос за 1 минуту</a>
+      </div>
+    </section>
+
+    <!-- ================= БЛОК 12 — ФИНАЛЬНЫЙ (ЦЕНА) ================= -->
+    <section class="section" id="price" aria-labelledby="b12-title">
+      <div class="wrap narrow">
+        <h2 id="b12-title">Разовая диагностика на 60 минут</h2>
+        <p class="sub">Точный ответ по вашей пенсии — вместо догадок «наверное, всё нормально»</p>
+
+        <!-- Ценность 1 -->
+        <p>За одну встречу лично с Юлией Жабко (более 16 лет опыта, сертификат CPA EURASIA) специалист:</p>
+        <ul class="bullets bullets--check">
+          <li>изучит ваши документы</li>
+          <li>проверит учтённый стаж</li>
+          <li>проанализирует пенсионные отчисления</li>
+          <li>объяснит, если найдёт спорные моменты или риски</li>
+          <li>составит понятный план дальнейших шагов — если они вообще нужны</li>
+        </ul>
+
+        <!-- Цена -->
+        <div class="price-card">
+          <p class="price-card__label">Полная стоимость личной консультации с Юлией</p>
+          <p class="price-card__old"><span class="strike">49&nbsp;500 тенге</span></p>
+          <p class="price-card__now">Сейчас, на старте приёма заявок через сайт: <strong>9&nbsp;900 тенге</strong></p>
+          <p class="price-card__hint">Стартовая цена — пока мы только начинаем принимать заявки онлайн.</p>
+        </div>
+
+        <!-- Ценность 2 -->
+        <p>Если дополнительных действий не требуется — вы получите уверенность, что ваша пенсионная ситуация проверена и всё в порядке.</p>
+        <p>Если будут выявлены спорные моменты — вы получите понятный план, что и как можно уточнить дальше.</p>
+        <p class="emphasis">В любом случае вы уходите не с догадкой, а с точным ответом.</p>
+
+        <a class="btn btn--primary btn--lg btn--block" href="#quiz">Записаться на диагностику</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= КОНТАКТЫ / ПОДВАЛ ================= -->
+  <footer class="site-footer" aria-labelledby="footer-title">
+    <div class="wrap">
+      <h2 id="footer-title">Как с нами связаться</h2>
+      <div class="contacts">
+        <p><span class="contacts__label">Специалист:</span> Юлия Жабко</p>
+        <p>Самый быстрый способ — короткий опрос на этой странице. Оставьте имя и телефон, мы перезвоним сами.</p>
+        <a class="btn btn--primary" href="#quiz">Пройти проверку</a>
+      </div>
+      <p class="site-footer__legal">
+        Это сайт частного специалиста. Мы не являемся государственным органом.
+        Оформление пенсии происходит через официальные органы Республики Казахстан
+        (ЕНПФ, Госкорпорация «Правительство для граждан»). Мы помогаем подготовиться и разобраться в документах.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
