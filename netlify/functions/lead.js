@@ -72,8 +72,11 @@ exports.handler = async function (event) {
       body: JSON.stringify({ chat_id: CHAT, text: message })
     });
 
+    const resultText = await res.text();
+    console.log("Telegram ответил:", res.status, resultText);
+
     if (!res.ok) {
-      return { statusCode: 502, body: "Telegram error" };
+      return { statusCode: 502, body: "Telegram error: " + resultText };
     }
 
     return { statusCode: 200, body: JSON.stringify({ ok: true }) };
