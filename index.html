@@ -15,45 +15,29 @@
   <!-- Верхняя плашка: сразу понятно, для кого услуга -->
   <div class="topbar" role="region" aria-label="Регион услуги">
     <div class="wrap topbar__inner">
-      <span>Услуга для жителей Казахстана · по законодательству РК</span>
+      <span>Помощь жителям Казахстана в выходе на пенсию по законодательству РК</span>
     </div>
   </div>
 
-  <header class="site-header">
-    <div class="wrap site-header__inner">
-      <p class="brand">Юлия&nbsp;Жабко · помощь с&nbsp;пенсией</p>
-      <a class="btn btn--ghost btn--sm" href="tel:+70000000000">Позвонить</a>
-    </div>
-  </header>
+  <!-- Шапка убрана по запросу: имя и кнопка "позвонить" не нужны -->
+
 
   <main id="main">
 
-    <!-- ================= БЛОК 1 — ГЛАВНЫЙ ЭКРАН ================= -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap hero__inner">
-        <div class="hero__text">
-          <h1 id="hero-title">Поможем оформить пенсию, которая вам положена по закону</h1>
-          <p class="lead">Бесплатная проверка за 5 минут — узнайте, всё ли учтено в вашем стаже, по законодательству Казахстана.</p>
-          <p class="hero__body">Иногда в расчёт пенсии не попадает часть стажа — из-за смены фамилии, переезда или переименования организации. Мы помогаем это проверить и, если нужно, поправить.</p>
-          <a class="btn btn--primary btn--lg" href="#quiz">Пройти проверку</a>
-          <p class="hero__reassure">Это бесплатно и ни к чему вас не обязывает.</p>
-        </div>
-
-        <div class="hero__media">
-          <!-- ЗАМЕНИТЬ на реальное фото: женщина ~55 лет, спокойный интерьер, без флагов и гербов -->
-          <figure class="photo photo--portrait">
-            <div class="photo__placeholder" role="img" aria-label="Фотография специалиста — женщина примерно 55 лет в спокойной домашней обстановке">
-              <svg viewBox="0 0 200 220" aria-hidden="true" focusable="false">
-                <rect width="200" height="220" rx="12" fill="#E7E1D4"/>
-                <circle cx="100" cy="82" r="40" fill="#C9BEA6"/>
-                <path d="M40 200c0-38 27-64 60-64s60 26 60 64" fill="#C9BEA6"/>
-              </svg>
-              <span class="photo__note">Место для фотографии</span>
-            </div>
-          </figure>
-        </div>
+    <!-- ================= БЛОК 1 — ГЛАВНЫЙ ЭКРАН (полноэкранный) ================= -->
+    <section class="hero-full" aria-labelledby="hero-title">
+      <img class="hero-full__bg" src="assets/hero.jpg" alt="Юлия Жабко, специалист по оформлению пенсии, за работой" width="900" height="1600" loading="eager">
+      <div class="hero-full__overlay"></div>
+      <div class="hero-full__content">
+        <h1 id="hero-title" class="hero-full__title reveal">Поможем оформить пенсию, которая вам положена по закону</h1>
+        <p class="hero-full__lead reveal reveal--d1">Бесплатная проверка за 5 минут — узнайте, всё ли учтено в вашем стаже, по законодательству Казахстана.</p>
+        <p class="hero-full__body reveal reveal--d2">Иногда в расчёт пенсии не попадает часть стажа — из-за смены фамилии, переезда или переименования организации. Мы помогаем это проверить и, если нужно, поправить.</p>
+        <a class="btn btn--primary btn--lg btn--shine reveal reveal--d3" href="#quiz">Пройти проверку</a>
+        <p class="hero-full__reassure reveal reveal--d4">Это бесплатно и ни к чему вас не обязывает.</p>
       </div>
-      <div class="ornament" aria-hidden="true"></div>
+      <div class="hero-full__scroll" aria-hidden="true">
+        <span></span>
+      </div>
     </section>
 
     <!-- ================= БЛОК 2 — ТРИ ВЕЩИ ================= -->
@@ -239,16 +223,8 @@
     <section class="section section--tint" aria-labelledby="b6-title">
       <div class="wrap about">
         <div class="about__media">
-          <!-- ЗАМЕНИТЬ на реальное фото Юлии Жабко -->
           <figure class="photo photo--portrait">
-            <div class="photo__placeholder" role="img" aria-label="Фотография специалиста Юлии Жабко">
-              <svg viewBox="0 0 200 220" aria-hidden="true" focusable="false">
-                <rect width="200" height="220" rx="12" fill="#E7E1D4"/>
-                <circle cx="100" cy="82" r="40" fill="#C9BEA6"/>
-                <path d="M40 200c0-38 27-64 60-64s60 26 60 64" fill="#C9BEA6"/>
-              </svg>
-              <span class="photo__note">Фото Юлии</span>
-            </div>
+            <img src="assets/yulia.jpg" alt="Юлия Жабко, специалист по оформлению пенсии" width="700" height="1268" loading="lazy">
           </figure>
         </div>
         <div class="about__text">
@@ -407,9 +383,9 @@
     <div class="wrap">
       <h2 id="footer-title">Как с нами связаться</h2>
       <div class="contacts">
-        <p><span class="contacts__label">Телефон:</span> <a href="tel:+70000000000">+7 (000) 000-00-00</a></p>
-        <p><span class="contacts__label">WhatsApp / Telegram:</span> <a href="#">указать ссылку</a></p>
         <p><span class="contacts__label">Специалист:</span> Юлия Жабко</p>
+        <p>Самый быстрый способ — короткий опрос на этой странице. Оставьте имя и телефон, мы перезвоним сами.</p>
+        <a class="btn btn--primary" href="#quiz">Пройти проверку</a>
       </div>
       <p class="site-footer__legal">
         Это сайт частного специалиста. Мы не являемся государственным органом.
