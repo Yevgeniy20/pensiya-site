@@ -140,16 +140,11 @@ h3 { font-size: clamp(21px, 3vw, 25px); }
 .hero__media { order: -1; }
 
 /* Фото */
-.photo { margin: 0; }
-.photo__placeholder {
-  position: relative; background: #E7E1D4; border-radius: var(--radius);
-  border: 1px dashed #B9AE93; overflow: hidden; text-align: center;
-  max-width: 340px; margin: 0 auto;
-}
-.photo__placeholder svg { display: block; width: 100%; height: auto; }
-.photo__note {
-  position: absolute; left: 0; right: 0; bottom: 10px;
-  font-size: 16px; color: #6B5F45;
+.photo { margin: 0; max-width: 340px; margin: 0 auto; }
+.photo img {
+  display: block; width: 100%; height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
 }
 
 /* ---------- Списки ---------- */
@@ -282,14 +277,181 @@ h3 { font-size: clamp(21px, 3vw, 25px); }
 .site-footer__legal { font-size: 17px; color: var(--ink-soft); margin-top: 20px; max-width: 760px; }
 
 /* =========================================================
+   ПОЛНОЭКРАННЫЙ ГЛАВНЫЙ ЭКРАН (герой)
+   ========================================================= */
+.hero-full {
+  position: relative;
+  min-height: 100svh;              /* на всю высоту экрана телефона */
+  min-height: 100vh;               /* запасной вариант для старых браузеров */
+  display: flex;
+  align-items: flex-end;           /* контент внизу, лицо сверху остаётся видно */
+  overflow: hidden;
+  background: #E9E6DF;
+}
+
+/* Фоновое фото */
+.hero-full__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 72% top;        /* смещаем к лицу справа, верх кадра виден */
+  z-index: 1;
+  animation: heroZoom 12s ease-out forwards;
+}
+
+/* Затемнение снизу — чтобы текст и кнопка читались */
+.hero-full__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to top,
+    rgba(10, 30, 35, 0.92) 0%,
+    rgba(10, 30, 35, 0.75) 30%,
+    rgba(10, 30, 35, 0.25) 55%,
+    rgba(10, 30, 35, 0.05) 75%,
+    rgba(10, 30, 35, 0) 100%
+  );
+}
+
+.hero-full__content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 22px 48px;
+  color: #fff;
+}
+
+.hero-full__title {
+  color: #fff;
+  font-size: clamp(30px, 8vw, 46px);
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+.hero-full__lead {
+  font-size: clamp(19px, 4.6vw, 23px);
+  line-height: 1.5;
+  margin-bottom: 0.8em;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+}
+.hero-full__body {
+  font-size: clamp(17px, 4.2vw, 20px);
+  line-height: 1.55;
+  color: #EAF0EF;
+  margin-bottom: 1.4em;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+}
+.hero-full__reassure {
+  font-size: 16px;
+  color: #D6DEDC;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+.hero-full .btn--lg { width: 100%; max-width: 420px; }
+
+/* Медленный, едва заметный зум фона при загрузке */
+@keyframes heroZoom {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1); }
+}
+
+/* Подсказка «листайте вниз» */
+.hero-full__scroll {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255,255,255,0.6);
+  border-radius: 14px;
+}
+.hero-full__scroll span {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  margin-left: -2px;
+  background: #fff;
+  border-radius: 2px;
+  animation: scrollDot 1.8s ease-in-out infinite;
+}
+@keyframes scrollDot {
+  0%   { opacity: 0; transform: translateY(0); }
+  30%  { opacity: 1; }
+  60%  { opacity: 1; transform: translateY(12px); }
+  100% { opacity: 0; transform: translateY(12px); }
+}
+
+/* Плавное появление текста при загрузке */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: revealUp 0.7s ease-out forwards;
+}
+.reveal--d1 { animation-delay: 0.15s; }
+.reveal--d2 { animation-delay: 0.30s; }
+.reveal--d3 { animation-delay: 0.45s; }
+.reveal--d4 { animation-delay: 0.60s; }
+@keyframes revealUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Деликатный «блеск» на главной кнопке (медленный, раз в несколько секунд) */
+.btn--shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn--shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.35) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: btnShine 4.5s ease-in-out infinite;
+}
+@keyframes btnShine {
+  0%   { left: -75%; }
+  18%  { left: 130%; }
+  100% { left: 130%; }   /* долгая пауза между проблесками */
+}
+
+/* =========================================================
    Адаптивность (mobile-first: расширяем вверх)
    ========================================================= */
 @media (min-width: 768px) {
-  .hero__inner { grid-template-columns: 1.2fr 0.8fr; align-items: center; }
-  .hero__media { order: 0; }
   .cards--3 { grid-template-columns: repeat(3, 1fr); }
   .about { grid-template-columns: 320px 1fr; }
   .two-lists { grid-template-columns: 1fr 1fr; }
+
+  /* На десктопе фон-фото показываем правее, текст — в левой части */
+  .hero-full__bg { object-position: 65% center; }
+  .hero-full__overlay {
+    background: linear-gradient(
+      to right,
+      rgba(10, 30, 35, 0.92) 0%,
+      rgba(10, 30, 35, 0.75) 35%,
+      rgba(10, 30, 35, 0.25) 60%,
+      rgba(10, 30, 35, 0) 85%
+    );
+  }
+  .hero-full { align-items: center; }
+  .hero-full__content { margin: 0; padding: 0 60px; max-width: 640px; }
 }
 
 /* =========================================================
@@ -297,4 +459,6 @@ h3 { font-size: clamp(21px, 3vw, 25px); }
    ========================================================= */
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  /* Текст героя должен быть виден сразу, без анимации появления */
+  .reveal { opacity: 1 !important; transform: none !important; }
 }
